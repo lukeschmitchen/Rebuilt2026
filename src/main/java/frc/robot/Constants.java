@@ -17,21 +17,32 @@ public final class Constants {
     public static final int kDriverControllerPort = 0;
   }
 
-  public static class SkeletonConstants {
-    public static int skeletonMotionMagicExpoK_V;
-    public static int skeletonMotionMagicExpoK_A;
-    public static int skeletonMotionMagicAccel;
-    public static int skeletonMotionMagicJerk;
+  public static class TurretConstants {
+    public static int turretMotionMagicExpoK_V;
+    public static int turretMotionMagicExpoK_A;
+    public static int turretMotionMagicAccel;
+    public static int turretMotionMagicJerk;
     public static int SupplyCurrentLimit;
     public static int StatorCurrentLimit;
-    public static int skeletonMotorID;
-    public static double[] skeletonPID = {0, 0, 0};
-    public static double[] skeletonSVA = {0, 0, 0};
-    public enum SkeletonWantedState {
-      IDLE
+    public static int turretMotorID;
+    public static int PASS_AIM_Position;
+    public static int HUB_AIM_Position;
+    public static int TRENCH_PRESET_Position;
+    public static double[] turretPID = {0, 0, 0};
+    public static double[] turretSVA = {0, 0, 0};
+    public enum TurretWantedState {
+      IDLE,
+      AIM,
+      TRENCH_PRESET,
+      CLOSE_PRESET
+      
     }
     public enum SystemState {
-      IDLING
+      IDLING,
+      PASS_AIMING,
+      HUB_AIMING,
+      TRENCH_PRESETTING,
+      CLOSE_PRESETTING
     }
   }
 }
