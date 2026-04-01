@@ -339,7 +339,7 @@ public final class Constants {
             TRENCH_PRESETTINGL,
             TRENCH_PRESETTINGR,
             HUB_PRESETTING,
-            TESTING
+            TESTING, L1AUTOCLIMBING, L1TELEOPCLIMBING
         }
     }
 
@@ -562,5 +562,22 @@ public final class Constants {
                 Map.entry(ScoringZone.NO_TRACK, Pose2d.kZero)
 
         );
+    }
+    public class ClimberConstants {
+        public static int ClimberMotorID = 0;
+        public static double L1AutoSpeed = 0;
+        public static double L1TELEOPSpeed = 0;
+
+        public enum ClimberWantedState {
+            IDLE, 
+            L1AUTOCLIMB,
+            L1TELEOPCLIMB
+        }
+        public enum ClimberSystemState {
+            IDLING,
+            L1AUTOCLIMBING,
+            L1TELEOPCLIMBING,
+        }
+
     }
 }
